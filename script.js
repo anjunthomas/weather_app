@@ -44,3 +44,18 @@ function getWeather(){
                 alert('Error fetching hourly forecast data. Please try again.');
             })
 }
+
+// get references to all the html elements
+function displayWeather(data){
+    const tempDivInfo = document.getElementById('temp-div');
+    const weatherInfoDiv = document.getElementById('weather-info');
+    const weatherIcon = document.getElementById('weather-icon');
+    const hourlyForecastDiv = document.getElementById('hourly-forecast');
+
+    // clear all previous content in the html elements 
+    // ensures that all new weather information is displayed clearly
+    // no existing content to worry about
+    weatherInfoDiv.innerHTML = '';
+    hourlyForecastDiv.innerHTML = '';
+    tempDivInfo.innerHTML = '';
+}
